@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+{% block css %} <link rel="stylesheet" href="/static/form.css"> {% endblock %}
+
+{% block content %}
+<main>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <h2>Edit PC</h2>
+
+        {{ form.image.label }}
+        {{ form.image }}
+
+        {{ form.motherboard.label }}
+        {{ form.motherboard }}
+        
+        {{ form.processor.label }}
+        {{ form.processor }}
+
+        {{ form.ssd.label }}
+        {{ form.ssd }}
+
+        {{ form.power_block.label }}
+        {{ form.power_block }}
+
+        {{ form.cooler.label }}
+        {{ form.cooler }}
+        
+        {{ form.video_card.label }}
+        {{ form.video_card }}
+
+        {{ form.ram.label }}
+        {{ form.ram }}
+
+        {{ form.case.label }}
+        {{ form.case}}
+
+        {{ form.price.label }}
+        {{ form.price }}
+
+        {{ form.save }}
+    </form>
+</main>
+{% endblock %}

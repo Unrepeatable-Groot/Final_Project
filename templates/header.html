@@ -1,0 +1,19 @@
+<header>
+    <h1>PC Building</h1>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/PC's">PC's</a>
+        <a href="/Laptops">Laptops</a>
+    </nav>
+    {% if current_user.is_authenticated %}
+        <a href="/profile" id="user">
+            <img src="{{current_user.image}}" alt="">
+        </a>
+    {% else %}
+        <div>
+            <a href="register">Register</a>
+            <a href="log_in">Log-In</a>
+        </div>
+    {% endif %} 
+</header>

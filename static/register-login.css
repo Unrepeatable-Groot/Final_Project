@@ -1,0 +1,54 @@
+main {
+  width: 100%;
+  min-height: 650px;
+  padding-top: 40px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+main form {
+  width: 380px;
+  border: 3px solid black;
+  border-radius: 10px;
+  text-align: center;
+}
+main form h2 {
+  margin-top: 20px;
+}
+main form label {
+  margin-bottom: 5px;
+}
+main form input {
+  width: 90% !important;
+  height: 25px;
+  margin: auto;
+  margin-bottom: 12px;
+  border: 2px solid black !important;
+}
+main form #submitBTN {
+  height: 40px;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+main .alert.alert-danger {
+  height: 70px;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main #login {
+  height: 300px;
+}
+main #changePassword {
+  height: 370px;
+  margin-top: 50px !important;
+}
+
+#main {
+  min-height: 539px;
+}
+#main form {
+  margin-top: 90px;
+}

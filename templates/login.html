@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock %}
+{% block css %} <link rel="stylesheet" href="/static/register-login.css"> {% endblock %}
+
+{% block content %}
+    <main id="main">
+        {% for errors in form.errors.values() %}
+            {% for error in errors %}
+                <div class="alert alert-danger">
+                    {{ error }}
+                </div>
+            {% endfor %}
+        {% endfor %}
+        {% set errors = get_flashed_messages() %}
+        {% for error in errors %}
+            <div class="alert alert-danger">
+                {{ error }}
+            </div>
+        {% endfor %}
+        <form method="POST" id="login">
+            {{ form.hidden_tag() }}
+            <h2>LOG-IN</h2>
+            
+            {{ form.meil.label }}
+            {{ form.meil(class="form-control") }}
+
+            {{ form.password.label }}
+            {{ form.password(class="form-control") }}
+
+            {{ form.save(class="btn btn-primary", id="submitBTN") }}
+        </form>
+    </main>
+{% endblock %}
