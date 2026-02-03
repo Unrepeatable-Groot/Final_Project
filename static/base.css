@@ -1,0 +1,116 @@
+header {
+  width: 100%;
+  height: 70px;
+  background-color: rgb(22, 22, 22);
+  box-shadow: 0px 0px 10px red;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0px;
+  z-index: 10;
+}
+header h1 {
+  color: white;
+  font-style: italic;
+  margin-left: 70px;
+  text-shadow: 0px 0px 4px red;
+}
+header nav {
+  width: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+header nav a {
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  font-style: italic;
+  text-shadow: 0px 0px 3px red;
+  transition: all 0.3s;
+}
+header nav a:hover {
+  transition: all 0.3s;
+  font-size: 24px;
+}
+header div {
+  margin-right: 70px;
+  display: flex;
+  gap: 20px;
+}
+header div a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 30px;
+  font-weight: bold;
+  font-style: italic;
+  border: 3px solid green;
+  border-radius: 15px;
+  box-shadow: 0px 0px 5px green;
+  color: green;
+  text-shadow: 0px 0px 5px red;
+  transition: all 0.3s;
+}
+header div a:hover {
+  transition: all 0.3s;
+  width: 125px;
+  height: 32px;
+}
+header #user {
+  width: 36px;
+  height: 36px;
+  border: 4px solid white;
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px yellow;
+  cursor: pointer;
+  margin-right: 70px;
+}
+header #user img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+footer {
+  width: 100%;
+  height: 70px;
+  background-color: rgb(22, 22, 22);
+  box-shadow: 0px 0px 10px red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0px;
+}
+footer a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer a img {
+  width: 50px;
+}
+footer a p {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  font-style: italic;
+  text-shadow: 0px 0px 3px red;
+  margin-bottom: 0px;
+}
+
+body {
+  margin: 3px;
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 70px;
+}

@@ -1,0 +1,91 @@
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+}
+main form {
+  width: 420px;
+  border: 3px solid black;
+  border-radius: 20px;
+  text-align: center;
+  background-image: url(https://rare-gallery.com/uploads/posts/271817-wallpaper-1080-2340.jpg);
+  background-size: cover;
+  background-position: right;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+}
+main form h2 {
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+main form input {
+  width: 80%;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+main form label {
+  width: 100%;
+  font-weight: bold;
+  text-shadow: 0px 0px 3px yellow;
+}
+main form .lp, main form .pc {
+  display: none;
+  margin: auto;
+}
+main form input.pc {
+  margin-bottom: 15px;
+}
+main form input.lp {
+  margin-bottom: 15px;
+}
+main form #save {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 35px;
+  border: 2px solid black;
+}
+main form #save:hover {
+  transition: all;
+  transition-duration: 0.7s;
+  background-color: rgb(130, 130, 200);
+  color: white;
+}
+main form #select {
+  margin-right: 32px;
+}
+main form #select li {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+}
+main form #select li input {
+  margin: 5px;
+  width: 40px;
+  margin-bottom: 12px;
+  display: none;
+}
+main form #select li label {
+  width: 95%;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 3px solid black;
+  margin: 5px;
+  transition-duration: 0.7s;
+  background-color: white;
+  font-weight: bold;
+}
+main form #select li label:hover {
+  transition: all;
+  transition-duration: 0.7s;
+  background-color: rgb(130, 130, 200);
+  color: white;
+}
+main form #select li input:checked ~ label {
+  background-color: rgb(130, 130, 200);
+  color: white;
+}/*# sourceMappingURL=form.css.map */

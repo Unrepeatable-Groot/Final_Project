@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+{% block css %} <link rel="stylesheet" href="/static/styles.css"> {% endblock %}
+
+{% block content %}
+    <div class="container-lg">
+        <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="/static/images/wallpaper2.png" class="d-block w-100" alt="wallpaper1">
+              </div>
+              <div class="carousel-item">
+                <img src="/static/images/wallpaper1.png" class="d-block w-100" alt="wallpaper2">
+              </div>
+              <div class="carousel-item">
+                <img src="/static/images/wallpaper3.png" class="d-block w-100" alt="wallpaper3">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <div id="box">
+          <a href="/PC's"><div class="left"><p>PC</p></div></a>
+          <a href="Laptops"><div class="right"><p>Laptop</p></div></a>
+        </div>
+
+        <main>
+          {% for pc in pc %}
+            <div class="box">
+                <div class="imageBox" style="background-image: url({{pc.image}});"></div>
+                <p>{{pc.processor}} - {{pc.video_card}}</p>
+                <a href="/PC_Info/{{pc.id}}"><button>{{pc.price}}$ - More Info</button></a>
+            </div>
+          {% endfor %}
+          <hr>
+          {% for laptop in laptops %}
+            <div class="box">
+                <div class="imageBox" style="background-image: url({{laptop.image}});"></div>
+                <p>{{laptop.processor}} - {{laptop.video_card}}</p>
+                <a href="/Laptop_Info/{{laptop.id}}"><button>{{laptop.price}}$ - More Info</button></a>
+            </div>
+          {% endfor %}
+        </main>
+    </div>
+{% endblock %}

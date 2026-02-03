@@ -1,0 +1,332 @@
+.container-xl {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.container-xl .image {
+  width: 420px;
+  height: 420px;
+  border: 1px solid rgb(175, 175, 175);
+  border-radius: 15px;
+  box-shadow: 0px 0px 7px gray;
+  background-size: cover;
+  background-position: center;
+}
+.container-xl .miniDescription {
+  height: 420px;
+  width: 60%;
+  margin-left: 50px;
+}
+.container-xl .miniDescription h2 {
+  font-size: 26px;
+  font-weight: bold;
+  font-style: italic;
+  margin-bottom: 40px;
+}
+.container-xl .miniDescription hr {
+  margin-bottom: 40px;
+}
+.container-xl .miniDescription p {
+  font-size: 18px;
+  font-weight: bold;
+  font-style: italic;
+}
+.container-xl .miniDescription .delivery {
+  font-size: 15px;
+}
+.container-xl .miniDescription .price {
+  font-size: 32px;
+  font-weight: bold;
+  font-style: italic;
+  color: red;
+}
+.container-xl .miniDescription button {
+  width: 250px;
+  height: 45px;
+  background-color: red;
+  border-radius: 50px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  font-style: italic;
+  border: none;
+}
+.container-xl .description {
+  width: 100%;
+  height: 550px;
+  margin-top: 40px;
+}
+.container-xl .description .up {
+  width: 300px;
+  margin-left: 50px;
+  height: 50px;
+  background-color: rgb(238, 238, 238);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+.container-xl .description .up p {
+  font-size: 25px;
+  font-weight: bold;
+  font-style: italic;
+  margin: 0px;
+}
+.container-xl .description .down {
+  width: 100%;
+  height: 450px;
+  background-color: rgb(238, 238, 238);
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 25px;
+  padding-bottom: 55px;
+  border-radius: 30px;
+}
+.container-xl .description .down .info {
+  width: 80%;
+  height: 40px;
+  border-bottom: 1px solid black;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.container-xl .description .down .info p {
+  margin: 0px;
+  margin-left: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  font-style: italic;
+}
+.container-xl .description .down .info span {
+  font-size: 16px;
+  font-weight: bold;
+  font-style: italic;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 40%;
+}
+.container-xl .coments {
+  width: 100%;
+  height: 400px;
+  background-color: rgb(220, 220, 220);
+  border-radius: 30px;
+  padding: 30px;
+}
+.container-xl .coments .comentArea {
+  width: 100%;
+  height: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.container-xl .coments .comentArea .comentBox {
+  width: 90%;
+  height: 92.5%;
+  border: 3px solid black;
+  border-radius: 30px;
+  padding: 25px;
+  background-color: white;
+  overflow-y: auto;
+  overflow-clip-margin: 10px;
+}
+.container-xl .coments .comentArea .comentBox .comment {
+  position: relative;
+  transition: all 0.7s;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 20px;
+}
+.container-xl .coments .comentArea .comentBox .comment span {
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+  color: gray;
+  margin: 5px;
+  margin-bottom: 2px;
+  margin-top: 0px;
+}
+.container-xl .coments .comentArea .comentBox .comment .admin {
+  color: gold;
+  text-shadow: 0px 0px 3px red;
+}
+.container-xl .coments .comentArea .comentBox .comment p {
+  display: inline-block;
+  padding: 5px 20px;
+  border-radius: 20px;
+  background-color: rgb(255, 198, 91);
+  font-style: italic;
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+.container-xl .coments .comentArea .comentBox .comment i {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  color: gray;
+  font-size: 12px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  transition: all 0.7s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container-xl .coments .comentArea .comentBox .comment i:hover {
+  transition: all 0.7s;
+  background-color: rgb(227, 227, 227);
+}
+.container-xl .coments .comentArea .comentBox .comment:hover {
+  transition: all 0.7s;
+  background-color: rgb(240, 240, 240);
+}
+.container-xl .coments .comentArea .comentBox .comment:hover + i {
+  display: block;
+}
+.container-xl .coments .comentArea .leftSide, .container-xl .coments .comentArea .rightSide {
+  height: 92.5%;
+  width: 25px;
+  border: 3px solid black;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.container-xl .coments .comentArea .leftSide {
+  right: 62px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-left: none;
+}
+.container-xl .coments .comentArea .rightSide {
+  left: 61px;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-right: none;
+}
+.container-xl .coments .textarea {
+  width: 100%;
+  height: 15%;
+}
+.container-xl .coments .textarea form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container-xl .coments .textarea form textarea {
+  width: 86%;
+  resize: none;
+  height: 35px;
+  border: 3px solid black;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-right: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-style: italic;
+  font-weight: bold;
+}
+.container-xl .coments .textarea form label {
+  width: 4%;
+  height: 35px;
+  border: 3px solid black;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-left: none;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.container-xl .coments .textarea form input {
+  display: none;
+}
+.container-xl .main {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.container-xl .main .box {
+  width: 300px;
+  height: 400px;
+  border: 4px solid rgb(175, 175, 175);
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px gray;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  transition: all 0.5s;
+  text-align: center;
+  background-color: white;
+  position: relative;
+}
+.container-xl .main .box:hover {
+  transform: translate(-10px, -10px);
+  box-shadow: 4px 4px 20px rgb(85, 85, 85);
+  transition: all 0.5s;
+}
+.container-xl .main .box .imageBox {
+  width: 270px;
+  height: 270px;
+  border: 2px solid rgb(175, 175, 175);
+  border-radius: 15px;
+  box-shadow: 0px 0px 7px gray;
+  margin: auto;
+  margin-top: 10px;
+  background-size: cover;
+  background-position: center;
+}
+.container-xl .main .box p {
+  margin: 10px;
+  font-weight: bold;
+  font-style: italic;
+}
+.container-xl .main .box a {
+  text-decoration: none;
+}
+.container-xl .main .box a button {
+  width: 90%;
+  border: 2px solid rgb(175, 175, 175);
+  border-radius: 10px;
+  box-shadow: 0px 0px 7px gray;
+  cursor: pointer;
+  font-weight: bold;
+  font-style: italic;
+  background-color: rgb(237, 56, 56);
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.container-xl #buttons {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.container-xl #buttons a #edit, .container-xl #buttons a #delete {
+  width: 220px;
+  height: 40px;
+  margin-bottom: 35px;
+  border: 4px solid rgb(209, 209, 209);
+  border-radius: 20px;
+  font-weight: bold;
+  font-style: italic;
+  color: white;
+}
+.container-xl #buttons a #edit {
+  background-color: rgb(4, 150, 255);
+}
+.container-xl #buttons a #delete {
+  background-color: rgb(237, 56, 56);
+}

@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+{% block css %} <link rel="stylesheet" href="/static/info.css"> {% endblock %}
+
+{% block content %}
+    <div class="container-xl">
+        <div class="image" style="background-image: url({{pc.image}})"></div>
+        <div class="miniDescription">
+            <h2>Computer - {{pc.processor}} / {{pc.video_card}} / {{pc.ram}}</h2>
+            <hr>
+            <p><i class="fa-sharp fa-solid fa-circle-check"></i> Warranty 1 year</p>
+            <p><i class="fa-solid fa-calendar-days"></i> You can use TBC Bank online installments</p>
+            <p class="delivery"><i class="fa-sharp fa-solid fa-truck-fast"></i> Delivery in Tbilisi - within 24 hours of ordering</p>
+            <p class="delivery"><i class="fa-sharp fa-solid fa-truck-fast"></i> Delivery in the region - within 2 working days from the order</p>
+            <p class="price">{{pc.price}}$</p>
+            <button><i class="fa-solid fa-cart-arrow-down"></i> Add to cart</button>
+        </div>
+        <div class="description">
+            <div class="up"><p>Description</p></div>
+            <div class="down">
+                <div class="info" id="up">
+                    <p>Motherboard</p>
+                    <span>{{pc.motherboard}}</span>
+                </div>
+                <div class="info">
+                    <p>Processor</p>
+                    <span>{{pc.processor}}</span>
+                </div>
+                <div class="info">
+                    <p>RAM</p>
+                    <span>{{pc.ram}}</span>
+                </div>
+                <div class="info">
+                    <p>Video Card</p>
+                    <span>{{pc.video_card}}</span>
+                </div>
+                <div class="info">
+                    <p>Cooling</p>
+                    <span>{{pc.cooler}}</span>
+                </div>
+                <div class="info">
+                    <p>SSD</p>
+                    <span>{{pc.ssd}}</span>
+                </div>
+                <div class="info">
+                    <p>Power Block</p>
+                    <span>{{pc.power_block}}</span>
+                </div>
+                <div class="info">
+                    <p>Case</p>
+                    <span>{{pc.case}}</span>
+                </div>
+            </div>
+        </div>
+        <div class="coments">
+            <div class="comentArea">
+                <div class="comentBox">
+                    {% for comment in comments %}
+                        <div class="comment">   
+                            {% if pc.id == comment.post_id %}
+                                {% for user in users %}
+                                    {% if user.id == comment.user_id %}
+                                        {% if user.role == "admin" %}
+                                            <span class="admin">{{ user.user_name }} {{ user.surename }}</span>
+                                        {% else %}
+                                            <span>{{ user.user_name }} {{ user.surename }}</span>
+                                        {% endif %}
+                                    {% endif %}
+                                {% endfor %}
+                                <p>{{ comment.coment}}</p>
+                            {% endif %}
+                            {% if current_user.is_authenticated and (current_user.id == comment.user_id or current_user.role == "admin") %}
+                            <a href="/delate_pc_comment/{{comment.id}}"><i class="fa-sharp fa-solid fa-trash"></i></a>
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="leftSide"></div>
+                <div class="rightSide"></div>
+            </div>
+            <div class="textarea">
+                <form method="POST">
+                    {{ form.hidden_tag() }}
+
+                    {{ form.comment }}
+                    <label for="submit"><i class="fa-sharp fa-solid fa-paper-plane"></i></label>
+                    {{ form.save(id="submit") }}
+                </form>
+            </div>
+        </div>
+        <div class="main">
+            {% for random_pc in random_pc %}
+                <div class="box">
+                    <div class="imageBox" style="background-image: url({{random_pc.image}});"></div>
+                    <p>{{random_pc.processor}} - {{random_pc.video_card}}</p>
+                    <a href="/PC_Info/{{random_pc.id}}"><button>{{random_pc.price}}$ - More Info</button></a>
+                </div>
+            {% endfor %}
+        </div>
+        <div id="buttons">
+            {% if current_user.id == pc.user_id %}
+                <a href="/edit_pc/{{ pc['id'] }}"><button id="edit">Edit PC</button></a>
+            {% endif %}
+            {% if current_user.id == pc.user_id or current_user.role == "admin" %}
+                <a href="/remove_pc/{{ pc['id'] }}"><button id="delete">Delete PC</button></a>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

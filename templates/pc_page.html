@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+{% block css %} <link rel="stylesheet" href="/static/products.css"> {% endblock %}
+
+{% block content %}
+<main>
+    {% for pc in pc %}
+        <div class="box">
+            <div class="imageBox" style="background-image: url({{pc.image}});"></div>
+            <p>{{pc.processor}} - {{pc.video_card}}</p>
+            <a href="/PC_Info/{{pc.id}}"><button>{{pc.price}}$ - More Info</button></a>
+        </div>
+    {% endfor %}
+</main>
+{% endblock %}

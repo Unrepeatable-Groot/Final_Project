@@ -1,0 +1,98 @@
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+
+    form {
+        width: 420px;
+        border: 3px solid black;
+        border-radius: 20px;
+        text-align: center;
+        background-image: url(https://rare-gallery.com/uploads/posts/271817-wallpaper-1080-2340.jpg);
+        background-size: cover;
+        background-position: right;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+
+        h2 {
+            margin-top: 20px;
+            margin-bottom: 25px;
+        }
+    
+        input {
+            width: 80%;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+        label {
+            width: 100%;
+            font-weight: bold;
+            text-shadow: 0px 0px 3px yellow;
+        }
+        .lp, .pc {
+            display: none;
+            margin: auto;
+        }
+        input.pc {
+            margin-bottom: 15px;
+        }
+        input.lp {
+            margin-bottom: 15px;
+        }
+        #save {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            height: 35px;
+            border: 2px solid black;
+
+            &:hover {
+                transition: all;
+                transition-duration: 0.7s;
+                background-color: rgb(130, 130, 200);
+                color: white;
+            }
+        }
+        #select {
+            margin-right: 32px;
+
+            li {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                flex-direction: column-reverse;
+
+                input {
+                    margin: 5px;
+                    width: 40px;
+                    margin-bottom: 12px;
+                    display: none;
+                } 
+                label {
+                    width: 95%;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    border: 3px solid black;
+                    margin: 5px;
+                    transition-duration: 0.7s;
+                    background-color: white;
+                    font-weight: bold;
+                    
+                    &:hover {
+                        transition: all;
+                        transition-duration: 0.7s;
+                        background-color: rgb(130, 130, 200);
+                        color: white;
+                    }
+                }
+                input:checked ~ label {
+                    background-color: rgb(130, 130, 200);
+                    color: white;
+                }
+            }
+        }
+    }
+}
