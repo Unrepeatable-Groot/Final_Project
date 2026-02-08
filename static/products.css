@@ -1,11 +1,14 @@
 main {
+  margin: auto;
   width: 100%;
+  max-width: 1500px;
   padding: 50px;
   padding-top: 50px;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  background-color: rgb(225, 225, 225);
+  /* background-color: rgb(225, 225, 225); */
+
 }
 main .box {
   width: 300px;
